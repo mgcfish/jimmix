@@ -59,6 +59,8 @@
 
   * get: get a mbean attribute
 
+  * set: set a mbean attribute
+
   * invoke: invoke a mbean's method
 
   * queryNames: look for mbean objectnames (only for jmxinvokerservlet)
@@ -89,6 +91,10 @@ $ jimmix.sh -i http://target/invoker/JMXInvokerServlet \
   createMBean jboss.admin:service=DeploymentFileRepository \
   org.jboss.console.manager.DeploymentFileRepository \
   'jboss.classloader:id="vfsfile:/home/jboss/prod/server/default/deploy/management/console-mgr.sar/"'
+
+ * Set an attribute:
+
+$ jimmix.sh -i http://jboss/invoker/JMXInvokerServlet set jboss.admin:service=DeploymentFileRepository BaseDir ./deploy/management
 
  * Bruteforce an object name with HEAD HTTP request:
 

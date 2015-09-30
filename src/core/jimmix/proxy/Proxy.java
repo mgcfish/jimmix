@@ -11,6 +11,7 @@ public interface Proxy {
 
   	public String invoke(ObjectName name, String actionName, Object[] params, String[] signature) throws Exception;
   	public String get(ObjectName name, String attribute) throws Exception;
+  	public void set(ObjectName name, String attribute, String value) throws Exception;
   	public ObjectInstance createMBean(String className, ObjectName name, ObjectName loaderName, Object[] params, String[] signature) throws Exception;
 	public void unregisterMBean(ObjectName name) throws Exception;
 	public Set<ObjectName> queryNames(ObjectName name, QueryExp query) throws Exception;

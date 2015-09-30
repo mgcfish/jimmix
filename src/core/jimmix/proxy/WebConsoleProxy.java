@@ -40,6 +40,10 @@ public class WebConsoleProxy implements Proxy {
 		return resultToString;
 	}
 
+	public void set(ObjectName name, String attribute, String value) throws Exception {
+		throw new Exception("WebConsole set not implemented yet.");
+	}
+
 	public ObjectInstance createMBean(String className, ObjectName name, ObjectName loaderName, Object[] params, String[] signature) throws Exception {
 		throw new Exception("WebConsole createMBean not implemented yet.");
 	}

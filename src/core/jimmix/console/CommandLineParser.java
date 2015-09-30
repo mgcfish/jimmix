@@ -178,6 +178,14 @@ public class CommandLineParser {
 			}
 			parsedCommand.put("action", new GetAction((String) parsedCommand.get("url"), type, mbean, args[2]));	
 	
+    // set
+		} else if(action.equals("set")) {
+			// check arguments
+			if(args.length != 4) {
+				printParsingError("Invalid arguments.");
+			}
+			parsedCommand.put("action", new SetAction((String) parsedCommand.get("url"), type, mbean, args[2], args[3]));	
+	
 		// createMBean
 		} else if(action.equals("createMBean")) {
 			if(args.length < 4) {

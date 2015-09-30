@@ -6,6 +6,7 @@ import javax.management.MBeanServerConnection;
 import javax.management.ObjectInstance;
 import javax.management.ObjectName;
 import javax.management.QueryExp;
+import javax.management.Attribute;
 import org.jboss.console.remote.RemoteMBeanAttributeInvocation;
 import org.jboss.console.remote.RemoteMBeanInvocation;
 import org.jboss.invocation.http.interfaces.HttpInvokerProxy;
@@ -74,6 +75,11 @@ public class JMXInvokerServletProxy implements Proxy {
 			resultToString = TypeConvertor.convertObjectToString(result, TypeConvertor.getObjectClass(result));
   	  	}
   	  	return resultToString;
+  	}
+
+  	public void set(ObjectName name, String attribute, String value) throws Exception {
+		String resultToString = "";
+  	  	mbeanServer.setAttribute(name, new Attribute(attribute, value));
   	}
 
   	public ObjectInstance createMBean(String className, ObjectName name, ObjectName loaderName, Object[] params, String[] signature) throws Exception {

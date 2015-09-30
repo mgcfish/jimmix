@@ -61,4 +61,8 @@
    <delete dir="build_lib"/>
 </target>
 
+<target name="clean" description="Remove all generated files.">
+   <delete dir="dist"/>
+</target>
+
 </project>
