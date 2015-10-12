@@ -1,3 +1,16 @@
+version 0.3.2:
+=============
+
+- Support for using using MLet to create remote objects
+
+version 0.3.1:
+=============
+
+- Support for 'set'ing attribute values
+
+===========
+FORKED
+===========
 
 version 0.3:
 ===========

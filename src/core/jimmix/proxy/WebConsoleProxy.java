@@ -59,5 +59,9 @@ public class WebConsoleProxy implements Proxy {
 	private String getObjectClass(Object object) {
 		return object.getClass().toString().split(" ")[1];
 	}
+
+  public void mlet(ObjectName objectName, String serverUrl) throws Exception {
+		throw new Exception("WebConsole mlet not implemented yet.");
+  }
 }
 
